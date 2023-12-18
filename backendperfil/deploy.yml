@@ -2,15 +2,14 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: bperfil
-
 spec:
-  replicas: 3  # Corregido de "replecas" a "replicas"
+  replicas: 3
   selector:
     matchLabels:
       role: bperfil
   minReadySeconds: 20
   strategy:
-    rollingUpdate:  # Corregido de "rollingUpadate" a "rollingUpdate"
+    rollingUpdate:
       maxSurge: 1
       maxUnavailable: 0
     type: RollingUpdate
@@ -20,9 +19,7 @@ spec:
         role: bperfil
     spec:
       containers:
-      - name: bperfil  # Corregido de "bperfil" a "name"
+      - name: bperfil
         image: kpao74/dsiibackend
         ports:
-        - containerPort: 3800  # Corregido de "contairnerport" a "containerPort"
-
-
+        - containerPort: 3800
