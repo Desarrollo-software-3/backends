@@ -4,7 +4,7 @@ metadata:
   name: bperfil
 
 spec:
-  replicas: 1  # Corregido de "replecas" a "replicas"
+  replicas: 3  # Corregido de "replecas" a "replicas"
   selector:
     matchLabels:
       role: bperfil
@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: bperfil  # Corregido de "bperfil" a "name"
-        image: kpao74/perfil
+        image: kpao74/dsiibackend
         ports:
         - containerPort: 3800  # Corregido de "contairnerport" a "containerPort"
 

@@ -1,0 +1,13 @@
+appiVersion: v1
+kind: Service
+metadata:
+  name: bperfil
+space:
+  type: LoadBalacer
+  -ports:
+    -protocol : TCP
+    port: 80
+    targetPort : 3800
+    name: http
+  selector:
+  role: bperfil
