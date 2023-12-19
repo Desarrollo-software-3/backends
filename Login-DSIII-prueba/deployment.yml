@@ -1,20 +1,20 @@
-# deployment.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: perfil
+  name: nombre-de-tu-app
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
-      app: perfil
+      app: nombre-de-tu-app
   template:
     metadata:
       labels:
-        app: perfil
+        app: nombre-de-tu-app
     spec:
       containers:
-      - name: perfil
-        image: kpao74/login:latest
-        ports:
-        - containerPort: 8000
+        - name: nombre-de-tu-contenedor
+          image:  kpao74/login:latest  # O la ruta a tu imagen
+          ports:
+            - containerPort: 8000
+

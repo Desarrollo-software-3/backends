@@ -53,8 +53,12 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
 ]
 CORS_ALLOWED_ORIGINS = [
-    '*',  # Agrega la URL de tu frontend aquí
+    'http://localhost:3000',
+    'https://tudominio.com',
+    '*',
+    # ...
 ]
+
 ROOT_URLCONF = 'backend.urls'
 
 TEMPLATES = [
