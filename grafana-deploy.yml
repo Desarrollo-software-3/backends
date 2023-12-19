@@ -1,20 +1,14 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: v1
+kind: Service
 metadata:
-  name: grafana
+  name: grafana-service
   namespace: default
 spec:
-  replicas: 1
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 3000
+      name: http
   selector:
-    matchLabels:
-      role: grafana
-  template:
-    metadata:
-      labels:
-        role: grafana
-    spec:
-      containers:
-        - name: grafana
-          image: grafana/grafana
-          ports:
-            - containerPort: 7000
+    role: grafana
