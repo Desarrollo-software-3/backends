@@ -1,22 +1,12 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: v1
+kind: Service
 metadata:
-  name: tu-aplicacion-deployment
+  name: tu-aplicacion-service
 spec:
-  replicas: 3
   selector:
-    matchLabels:
-      app: tu-aplicacion
-  template:
-    metadata:
-      labels:
-        app: tu-aplicacion
-    spec:
-      containers:
-      - name: tu-aplicacion
-        image: kpao74/evento  # Reemplaza esto con tu nombre de imagen y etiqueta
-        ports:
-        - containerPort: 4000
-      env:
-        - name: NODE_ENV
-          value: production
+    app: tu-aplicacion
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 4000
+  type: LoadBalancer

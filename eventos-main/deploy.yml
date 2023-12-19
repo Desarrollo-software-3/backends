@@ -17,6 +17,8 @@ spec:
         image: nombre-de-tu-imagen:tag
         ports:
         - containerPort: 4000
-      env:
+        env:
         - name: NODE_ENV
           value: production
+        - name: MONGO_URI
+          value: "mongodb+srv://rivaslina:rQbnSMvYNaSey0Ia@lawatty.rtzdvdd.mongodb.net/tickify?retryWrites=true&w=majority"
