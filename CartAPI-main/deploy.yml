@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: carrito
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: carrito
+  template:
+    metadata:
+      labels:
+        app: carrito
+    spec:
+      containers:
+      - name: carrito
+        image: kpao74/carrito:latest
+        ports:
+        - containerPort: 8000
+        env:
+        - name: NODE_ENV
+          value: production
+        - name: MONGO_URI
+          value: "mongodb+srv://rivaslina:rQbnSMvYNaSey0Ia@lawatty.rtzdvdd.mongodb.net/tickify?retryWrites=true&w=majority"
