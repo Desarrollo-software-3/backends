@@ -13,11 +13,7 @@ conectarDB();
 
 
 const allowedOrigins = ['http://localhost:3000', 'https://azteca-proyecto-beta.vercel.app/',];
-app.use(cors({
-    origin: '*', // Configura '*' para permitir cualquier URL
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    credentials: true,
-  }));
+app.use(cors({}));
 
 // Uso de la función middleware
 
