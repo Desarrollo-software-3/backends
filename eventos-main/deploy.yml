@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tu-aplicacion-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: tu-aplicacion
+  template:
+    metadata:
+      labels:
+        app: tu-aplicacion
+    spec:
+      containers:
+      - name: tu-aplicacion
+        image: nombre-de-tu-imagen:tag
+        ports:
+        - containerPort: 4000
+      env:
+        - name: NODE_ENV
+          value: production

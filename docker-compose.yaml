@@ -1,9 +1,0 @@
-version: '3'
-
-services:
-  backendperfil:
-    build:
-      context: ./backendperfil
-      dockerfile: Dockerfile
-    ports:
-      - "9000:9000"
