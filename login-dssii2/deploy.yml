@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: tu-aplicacion-deployment2
+  name: login
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: tu-aplicacion2
+      app: login
   template:
     metadata:
       labels:
-        app: tu-aplicacion2
+        app: login
     spec:
       containers:
-      - name: tu-aplicacion2
+      - name: login
         image: kpao74/login:latest
         ports:
         - containerPort: 5000
