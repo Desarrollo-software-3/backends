@@ -13,6 +13,7 @@ COPY . /app
 # Instala las dependencias de la aplicación
 RUN pip install -r requirements.txt
 
+
 # Expone el puerto en el que se ejecuta tu aplicación Django
 EXPOSE 8000
 
