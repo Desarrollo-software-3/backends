@@ -1,12 +1,12 @@
-apiVersion: v1
 kind: Service
+apiVersion: v1
 metadata:
-  name: perfil
+  name: django-service
 spec:
   selector:
-    app: perfil
+    pod: django
   ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 8000
-  type: LoadBalancer
+  - protocol: TCP
+    port: 8000
+    targetPort: 8000
+  type: NodePort
