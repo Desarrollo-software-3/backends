@@ -55,8 +55,8 @@ MIDDLEWARE = [
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
     'https://tudominio.com',
-    '*',
-    # ...
+    'http://*',
+    # Agrega otros orígenes según sea necesario
 ]
 
 ROOT_URLCONF = 'backend.urls'

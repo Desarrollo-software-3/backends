@@ -16,8 +16,10 @@ RUN pip install -r requirements.txt
 # Expone el puerto en el que se ejecuta tu aplicación Django
 EXPOSE 8000
 
-# Configura las variables de entorno, si es necesario
-# ENV DJANGO_SETTINGS_MODULE=myapp.settings.production
+RUN python manage.py collectstatic --noinput
 
-# Ejecuta el comando para migrar la base de datos y arrancar el servidor
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+# Expone el puerto en el que se ejecuta tu aplicación Django
+EXPOSE 8000
+
+# Utiliza Gunicorn para arrancar la aplicación
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "myapp.wsgi:application"]
