@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: tu-aplicacion
-        image: nombre-de-tu-imagen:tag
+        image: kpao74/evento:latest
         ports:
         - containerPort: 4000
         env:
