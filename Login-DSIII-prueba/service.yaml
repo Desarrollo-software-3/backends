@@ -1,10 +1,10 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: django-service
+  name: perfil
 spec:
   selector:
-    pod: django
+    pod: perfil
   ports:
   - protocol: TCP
     port: 8000
