@@ -9,7 +9,7 @@ from bson import json_util
 db=dbase.dbConnection()
 
 app=Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/api/*": {"origins": "https://frontend-atardecer01-s-team.vercel.app/"}})
 
 #rutas
 @app.route('/')
