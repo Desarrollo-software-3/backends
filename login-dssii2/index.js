@@ -12,7 +12,7 @@ dotenv.config();
 conectarDB();
 
 
-const allowedOrigins = ['http://localhost:3000', 'https://azteca-proyecto-beta.vercel.app/',];
+const allowedOrigins = ['http://localhost:3000', 'https://azteca-proyecto-beta.vercel.app/','https://frontend-atardecer01-s-team.vercel.app/'];
 app.use(cors({}));
 
 // Uso de la función middleware
