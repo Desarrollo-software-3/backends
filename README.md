@@ -34,7 +34,10 @@ Asegúrate de tener las siguientes herramientas instaladas antes de comenzar:
 ![image](https://github.com/Desarrollo-software-3/backends/assets/92823297/1bd12b38-0cd6-45b2-b9b6-83a8159d4b3f)
 ![image](https://github.com/Desarrollo-software-3/backends/assets/92823297/c85176a3-3868-4ff0-9b92-5cfc77c20fad)
 # Monitoreo
-    se utilizo prometheus para el seguimiento del clouster y grafana para visuaalizar la informacion.
+    Se empleó Prometheus para monitorizar el clúster y Grafana para visualizar la información.
+.
+![image](https://github.com/Desarrollo-software-3/backends/assets/92823297/36baeafb-68ad-474a-a350-60c648e5b231)
+
 ![image](https://github.com/Desarrollo-software-3/backends/assets/92823297/35d71ceb-c444-41aa-bb1f-42bd3c012bff)
 
 
